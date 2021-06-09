@@ -1,0 +1,6 @@
+version: "3"
+services:
+  mqtt2timescaledb:
+    image: dbck/mqtt2timescaledb:${TAG}
+    build:
+      context: ./build

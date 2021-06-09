@@ -1,0 +1,18 @@
+{
+  "name": "mqtt2timescaledb",
+  "version": "1.0.0",
+  "description": "Persist mqtt messages in timescaledb",
+  "main": "app.js",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "mqtt": "^4.0.0",
+    "pg": "^8.0.3",
+    "pm2": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Boeckmann",
+  "license": "Apache License Version 2.0"
+}

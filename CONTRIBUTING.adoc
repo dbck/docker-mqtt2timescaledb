@@ -1,0 +1,58 @@
+# Contribution
+
+Please send a pull request.
+
+# Development
+
+```
+docker build -t="dbck/mqtt2timescaledb:dev" build/
+docker container run --rm -it dbck/mqtt2timescaledb:dev
+```
+
+## Build, develop and test image
+
+```
+export TAG=dev && docker-compose build && docker-compose up -d && docker-compose logs -f
+```
+
+```
+export TAG=dev && docker-compose up
+```
+
+```
+export TAG=dev && docker-compose down
+```
+
+## Build and push container image
+
+```
+export TAG=$(date +%Y%m%d-%H%M%S)
+docker build -t="dbck/mqtt2timescaledb:${TAG}" build/
+docker container run --rm -it dbck/mqtt2timescaledb:${TAG}
+docker push dbck/mqtt2timescaledb:${TAG}
+```
+
+```
+export TAG=$(date +%Y%m%d-%H%M%S)
+docker-compose build
+docker-compose push
+```
+
+# Build image and create a release
+
+## With message
+
+```
+git checkout main
+git tag -a v1.0.0 -m "Some text"
+git push origin v1.0.0
+```
+
+## Without message
+
+```
+git checkout main
+git tag v1.0.0
+git push origin v1.0.0
+```
+
