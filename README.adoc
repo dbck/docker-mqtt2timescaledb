@@ -5,12 +5,12 @@ This image reads mqtt messages from a mqtt broker and inserts it into a timescal
 # Configuration (Enviroment variables)
 
 ```
-ENV MQTT_HOST=mqtt
-ENV MQTT_PORT=1883
-ENV PGHOST=localhost
-ENV PGUSER=postgres
-ENV PGDATABASE=postgres
-ENV PGPASSWORD=
+MQTT_HOST=mqtt
+MQTT_PORT=1883
+PGHOST=localhost
+PGUSER=postgres
+PGDATABASE=postgres
+PGPASSWORD=
 ```
 
 # License
